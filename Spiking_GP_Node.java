@@ -8,18 +8,18 @@ package model;
  */
 public class Spiking_GP_Node extends Spiking_Node {
 	
-	protected static double _mp_spike_threshold = 25.0;
-	protected static double _u_spike_threshold_factor = 0.0;
-	protected static double _mp_rest = -55.0;
-	protected static double _threshold = -40.0;
-	protected static double _reset = -50.0;
-	protected static double _u_spike_add = 200.0;
-	protected static double _k = 1.0;
-	protected static double _C = 20.0;
-	protected static double _const_input = 140.0;
-	protected static double _a = 0.15;
-	protected static double _b = 8.0;
-	protected static double _noise_stdv = 0.0;
+	protected static final double _mp_spike_threshold = 25.0;
+	protected static final double _u_spike_threshold_factor = 0.0;
+	protected static final double _mp_rest = -55.0;
+	protected static final double _threshold = -40.0;
+	protected static final double _reset = -50.0;
+	protected static final double _u_spike_add = 200.0;
+	protected static final double _k = 1.0;
+	protected static final double _C = 20.0;
+	protected static final double _const_input = 140.0;
+	protected static final double _a = 0.15;
+	protected static final double _b = 8.0;
+	protected static final double _noise_stdv = 0.0;
 
 	public Spiking_GP_Node(){
 		super();

@@ -8,17 +8,17 @@ package model;
  */
 public class Spiking_Striatal_Node extends Spiking_Node {
 	
-	protected static double _mp_spike_threshold = 40.0;
-	protected static double _u_spike_threshold_factor = 0.0;
-	protected static double _mp_rest = -80.0;
-	protected static double _threshold = -25.0;
-	protected static double _reset = -55.0;
-	protected static double _u_spike_add = 150.0;
-	protected static double _k = 1.0;
-	protected static double _C = 50.0;
-	protected static double _a = 0.01;
-	protected static double _b = -20.0;
-	protected static double _noise_stdv = 0.0;
+	protected static final double _mp_spike_threshold = 40.0;
+	protected static final double _u_spike_threshold_factor = 0.0;
+	protected static final double _mp_rest = -80.0;
+	protected static final double _threshold = -25.0;
+	protected static final double _reset = -55.0;
+	protected static final double _u_spike_add = 150.0;
+	protected static final double _k = 1.0;
+	protected static final double _C = 50.0;
+	protected static final double _a = 0.01;
+	protected static final double _b = -20.0;
+	protected static final double _noise_stdv = 0.0;
 
 	public Spiking_Striatal_Node(){
 		super();

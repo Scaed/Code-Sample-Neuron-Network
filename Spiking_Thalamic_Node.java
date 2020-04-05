@@ -10,20 +10,20 @@ package model;
  */
 public class Spiking_Thalamic_Node extends Spiking_Node {
 	
-	protected static double _mp_spike_threshold = 35.0;
-	protected static double _u_spike_threshold_factor = 0.1;
-	protected static double _mp_rest = -60.0;
-	protected static double _mp_rest_u = -65.0;
-	protected static double _threshold = -50.0;
-	protected static double _reset = -60.0;
-	protected static double _u_spike_add = 10.0;
-	protected static double _k = 1.6;
-	protected static double _C = 200.0;
-	protected static double _a = 0.01;
-	protected static double _b_1 = 15.0;
-	protected static double _b_2 = 0.0; 
-	protected static double _b_threshold = -65.0;
-	protected static double _noise_stdv = 0.0;
+	protected static final double _mp_spike_threshold = 35.0;
+	protected static final double _u_spike_threshold_factor = 0.1;
+	protected static final double _mp_rest = -60.0;
+	protected static final double _mp_rest_u = -65.0;
+	protected static final double _threshold = -50.0;
+	protected static final double _reset = -60.0;
+	protected static final double _u_spike_add = 10.0;
+	protected static final double _k = 1.6;
+	protected static final double _C = 200.0;
+	protected static final double _a = 0.01;
+	protected static final double _b_1 = 15.0;
+	protected static final double _b_2 = 0.0; 
+	protected static final double _b_threshold = -65.0;
+	protected static final double _noise_stdv = 0.0;
 
 	public Spiking_Thalamic_Node(){
 		super();

@@ -5,9 +5,9 @@ import java.util.*;
 /**
  * An extension of Node that implements the framework for representing a spiking neuron using the Izhekivitch simple model.
  * Many specific parameter values are determined by the specific kind of neuron being modeled and so this class is left as an abstract.
- * Several parameters are stored in size 1 arrays so that changes made to a given instance affect all the instances of the same connection.
- * Many other parameters are constant between all neurons of the same type. Of particular note is the _gaba_alpha_curve and _glut_alpha_curve arrays.
- * See the calc_output method for more information.
+ * Those parameter and the function that uses them are included in this abstract class as comments to foster consistent naming within subclasses.
+ * Several other parameters are stored in size 1 arrays so that changes made to a given instance affect all the instances of the same connection.
+ * The _gaba_alpha_curve and _glut_alpha_curve arrays may be confusing; see the calc_output method for more information on their function and purpose.
  * @author Scaed
  *
  */
@@ -19,25 +19,25 @@ public abstract class Spiking_Node extends Node{
 	protected final Double[] _glut_output = new Double[1];
 	protected final Double[] _gaba_output = new Double[1];
 	
-	protected static double _min_alpha_value = 0.0000000001;
-	protected static double _mp_spike_threshold;
-	protected static double _u_spike_threshold_factor;
-	protected static double _mp_rest;
-	protected static double _u_rest = 0.0;
-	protected static double _threshold;
-	protected static double _reset;
-	protected static double _u_spike_add;
-	protected static double _k;
-	protected static double _C;
-	protected static double _a;
-	protected static double _b;
-	protected static double _noise_stdv;
-	protected static int _max_act_durr = 747;
+	protected static final double _min_alpha_value = 0.0000000001;
+	//protected static final double _mp_spike_threshold;
+	//protected static final double _u_spike_threshold_factor;
+	//protected static final double _mp_rest;
+	protected static final double _u_rest = 0.0;
+	//protected static final double _threshold;
+	//protected static final double _reset;
+	//protected static final double _u_spike_add;
+	//protected static final double _k;
+	//protected static final double _C;
+	//protected static final double _a;
+	//protected static final double _b;
+	//protected static final double _noise_stdv;
+	protected static final int _max_act_durr = 747;
 	
 	protected static Random _rng = new Random();
 	
-	protected static Double _lambda_glut = 60.0;
-	protected static Double _lambda_gaba = 30.0;
+	protected static final Double _lambda_glut = 60.0;
+	protected static final Double _lambda_gaba = 30.0;
 	public static Double[] _gaba_alpha_curve; 
 	public static Double[] _glut_alpha_curve;
 
@@ -58,8 +58,7 @@ public abstract class Spiking_Node extends Node{
 	 * Although the values of the various parameters can vary, their use generally stays the same, as defined in Izhekivitch's work.
 	 * Thus, for most neuron types this method can be copied into the subclasses where the values of the parameters can be accessed.
 	 */
-	public void step(){
-		System.out.println("Alert! Your model is using a superclass function that does not have access to vital parameter values. You must define the function step() in the subclasses where the parameter vaules are accessable.");
+	/*public void step(){
 		double _err = _rng.nextGaussian() * _noise_stdv;
 		double u_change = _a * (_b * (_membrane_potential[0] - _mp_rest) - _u[0]); //diff 1
 		double mp_change = ((_k * (_membrane_potential[0] - _mp_rest) * (_membrane_potential[0] - _threshold)) - _u[0] + _input[0] + _err) / _C;
@@ -78,7 +77,7 @@ public abstract class Spiking_Node extends Node{
 		}
 
 		calc_output();
-	}
+	}*/
 	
 	/**
 	 * Often neural networks are run many times. This method resets the node between trials.

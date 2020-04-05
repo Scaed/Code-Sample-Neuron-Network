@@ -8,17 +8,17 @@ package model;
  */
 public class Spiking_Pyramidal_Node extends Spiking_Node {
 	
-	protected static double _mp_spike_threshold = 35.0;
-	protected static double _u_spike_threshold_factor = 0.0;
-	protected static double _mp_rest = -60.0;
-	protected static double _threshold = -40.0;
-	protected static double _reset = -50.0;
-	protected static double _u_spike_add = 100.0;
-	protected static double _k = 0.7;
-	protected static double _C = 100.0;
-	protected static double _a = 0.03;
-	protected static double _b = -2.0;
-	protected static double _noise_stdv = 200.0;
+	protected static final double _mp_spike_threshold = 35.0;
+	protected static final double _u_spike_threshold_factor = 0.0;
+	protected static final double _mp_rest = -60.0;
+	protected static final double _threshold = -40.0;
+	protected static final double _reset = -50.0;
+	protected static final double _u_spike_add = 100.0;
+	protected static final double _k = 0.7;
+	protected static final double _C = 100.0;
+	protected static final double _a = 0.03;
+	protected static final double _b = -2.0;
+	protected static final double _noise_stdv = 200.0;
 
 	public Spiking_Pyramidal_Node(){
 		super();
